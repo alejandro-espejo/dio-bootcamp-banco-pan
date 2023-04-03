@@ -1,0 +1,23 @@
+server.port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/academia?useTimezone=true?serverTimeZone=UTC&useLegacyDate
+    username: postgres
+    password: postgres
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format-sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    
+logging:
+  level:
+    org:
+      hibernates:
+        type: trace
+        
